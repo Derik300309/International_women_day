@@ -1,0 +1,93 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+body
+{
+    min-height: 100vh;
+    background: #c7366e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+header
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+}
+#lineDrawing
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#lineDrawing svg
+{
+  width: 100%;
+  z-index: 999;
+  position: relative;
+}
+#lineDrawing svg path
+{
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 4px;
+}
+#lineDrawing .line
+{
+    width: 100%;
+    position: absolute;
+    transform: scale(0.8);
+}
+.bouquet
+{
+    z-index: -1;
+    position: absolute;
+    max-width: 100%;
+    transform: translateY(20%);
+}
+.fade
+{
+    animation: Fade 5s 1;
+}
+.dot{
+    width:35px;
+    height:35px;
+    position:absolute;
+    background: url(../img/flow.png);
+    background-size: 100% 100%;
+    top: 0;
+    left: 0;
+  }
+#container
+{
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@keyframes Fade {
+    0%{
+        transform: translateY(150%);
+    }
+    100%{
+        transform: translateY(20%);
+    }
+}
+@media(max-width: 768px)
+{
+    #lineDrawing .line
+    {
+        transform: scale(1);
+    }
+}
